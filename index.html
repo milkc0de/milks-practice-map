@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>みるくの練習マップ | Milk’s Practice Map</title>
+  <meta name="description" content="Fortnite クリエイティブで制作中の統合練習マップ。セントラルハブからエイム・編集・ピースコントロール・フリービルドへ。制作途中の進捗ギャラリー。" />
+  <link rel="canonical" href="https://YOUR_USERNAME.github.io/YOUR_REPO/" />
+
+  <!-- OGP / Twitter -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Milk’s Practice Map" />
+  <meta property="og:title" content="みるくの練習マップ | Milk’s Practice Map" />
+  <meta property="og:description" content="可愛い公園テーマだけど中身はガチ。エイム>=編集>ピースを重視した統合練習パーク。" />
+  <meta property="og:image" content="images/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="images/og.jpg" />
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"みるくの練習マップ | Milk’s Practice Map",
+    "author":{"@type":"Person","name":"milkc0de"},
+    "image":["images/central-hero.jpg"],
+    "inLanguage":"ja",
+    "keywords":"Fortnite, Creative, Aim, Edit, Piece Control, 練習マップ",
+    "dateModified":"2025-09-03"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg: #fffafc;
+      --card: #ffffffcc;
+      --ink: #1f2937;
+      --muted:#6b7280;
+      --brand:#ff76b5;
+      --brand-2:#74c7ff;
+      --accent:#ffe08a;
+      --ring: rgba(255,118,181,.25);
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(160deg,#ffe7f1,#e7f3ff);color:var(--ink);font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans JP","Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:20px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{width:56px;height:56px;border-radius:14px;box-shadow:var(--shadow)}
+    .title{display:flex;flex-direction:column;line-height:1.2}
+    .title b{font-size:22px}
+    .title small{color:var(--muted)}
+    .lang{display:flex;gap:8px}
+    .lang button{padding:8px 12px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+    .lang button.active{border-color:var(--brand);box-shadow:0 0 0 4px var(--ring)}
+    .hero{background:var(--card);backdrop-filter:saturate(140%) blur(6px);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .hero img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+    .hero .cap{padding:14px 16px;border-top:1px dashed #f1b9d2;background:linear-gradient(0deg,#fff9fd,#fff)}
+    .capsub{color:var(--muted);font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:20px}
+    .card{grid-column:span 6;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .card img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+    .card .cap{padding:12px 14px;border-top:1px solid #f5f5f5}
+    .sec{margin-top:28px;background:#ffffffb8;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+    .badge{display:inline-block;font-weight:700;padding:4px 10px;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:white}
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    ul{margin:0 0 0 1.2em}
+    footer{margin:34px 0 10px;color:var(--muted);font-size:14px;text-align:center}
+    @media (max-width:900px){
+      .grid .card{grid-column:span 12}
+      .twocol{grid-template-columns:1fr}
+    }
+    /* 言語切替 */
+    [data-lang="en"]{display:none}
+    body.en [data-lang="ja"]{display:none}
+    body.en [data-lang="en"]{display:revert}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="Milk’s Practice Map logo" />
+        <div class="title">
+          <b data-lang="ja">みるくの練習マップ</b>
+          <b data-lang="en">Milk’s Practice Map</b>
+          <small data-lang="ja">可愛い公園テーマで統合練習。エイム>=編集>ピース</small>
+          <small data-lang="en">Cute park theme. Integrated practice focused on Aim ≥ Edit > Piece</small>
+        </div>
+      </div>
+      <div class="lang" aria-label="language toggle">
+        <button id="btnJA" class="active">日本語</button>
+        <button id="btnEN">English</button>
+      </div>
+    </header>
+
+    <article>
+      <!-- ヒーロー -->
+      <figure class="hero">
+        <img src="images/central-hero.jpg" alt="島に入ってゲーム開始直後のセントラルハブ" loading="eager" />
+        <figcaption class="cap">
+          <div data-lang="ja"><span class="badge">進捗</span> 1枚目はゲーム開始直後に見えるセントラルハブです</div>
+          <div class="capsub" data-lang="en">Hero view from the central hub at game start</div>
+        </figcaption>
+      </figure>
+
+      <!-- ギャラリー 4つの入口 -->
+      <section class="grid" aria-label="zone entrances">
+        <figure class="card">
+          <img src="images/entrance-piece-control.jpg" alt="ピースコントロール入口のサイン" loading="lazy" />
+          <figcaption class="cap">
+            <div data-lang="ja">2枚目 ピースコントロール入口</div>
+            <div data-lang="en">Piece Control entrance</div>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="images/entrance-aim.jpg" alt="エイム入口のサイン" loading="lazy" />
+          <figcaption class="cap">
+            <div data-lang="ja">3枚目 エイム入口</div>
+            <div data-lang="en">Aim entrance</div>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="images/entrance-freebuild.jpg" alt="フリービルド入口のサイン" loading="lazy" />
+          <figcaption class="cap">
+            <div data-lang="ja">4枚目 フリービルド入口</div>
+            <div data-lang="en">Free Build entrance</div>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="images/entrance-edit.jpg" alt="編集入口のサイン" loading="lazy" />
+          <figcaption class="cap">
+            <div data-lang="ja">5枚目 編集入口</div>
+            <div data-lang="en">Edit entrance</div>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- 釣りまわり -->
+      <section class="grid" aria-label="fishing fun">
+        <figure class="card">
+          <img src="images/vending-fishing.jpg" alt="釣り自販機" loading="lazy" />
+          <figcaption class="cap">
+            <div data-lang="ja">6枚目 釣り自販機。遊び心で実装</div>
+            <div data-lang="en">Fishing vending machine for fun</div>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="images/fountain-fishing.jpg" alt="セントラルハブの噴水で釣りができる様子" loading="lazy" />
+          <figcaption class="cap">
+            <div data-lang="ja">7枚目 セントラルハブの噴水で釣りができます</div>
+            <div data-lang="en">You can even fish at the central fountain</div>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- 設計メモ -->
+      <section class="sec">
+        <h2 data-lang="ja">設計ノート</h2>
+        <h2 data-lang="en">Design Notes</h2>
+        <div class="twocol">
+          <div>
+            <h3 data-lang="ja">狙い</h3>
+            <h3 data-lang="en">Goals</h3>
+            <ul>
+              <li data-lang="ja">統合型。セントラルハブから各練習へ最短動線</li>
+              <li data-lang="en">Integrated. Minimal hops from hub to each practice zone</li>
+              <li data-lang="ja">見た目は可愛い。中身は競技密度。エイムを最重視</li>
+              <li data-lang="en">Cute visuals with competitive density. Aim first</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-lang="ja">次の実装候補</h3>
+            <h3 data-lang="en">Next Tasks</h3>
+            <ul>
+              <li data-lang="ja">エイム移動ターゲットと距離別レンジ</li>
+              <li data-lang="en">Moving targets and distance-based ranges</li>
+              <li data-lang="ja">編集トンネルとタイム計測</li>
+              <li data-lang="en">Edit tunnels with timers</li>
+              <li data-lang="ja">ピース用ミニ部屋とBOT循環</li>
+              <li data-lang="en">Piece micro-rooms with respawning bots</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <footer>
+      <p data-lang="ja">© 2025 みるくの練習マップ</p>
+      <p data-lang="en">© 2025 Milk’s Practice Map</p>
+    </footer>
+  </div>
+
+  <script>
+    const btnJA = document.getElementById("btnJA");
+    const btnEN = document.getElementById("btnEN");
+    const setLang = (code)=>{
+      if(code==="en"){
+        document.body.classList.add("en");
+        btnEN.classList.add("active"); btnJA.classList.remove("active");
+      }else{
+        document.body.classList.remove("en");
+        btnJA.classList.add("active"); btnEN.classList.remove("active");
+      }
+      try{ localStorage.setItem("lang", code); }catch(e){}
+    };
+    btnJA.onclick=()=>setLang("ja");
+    btnEN.onclick=()=>setLang("en");
+    // 初期化
+    try{
+      const pref = localStorage.getItem("lang")||"ja";
+      setLang(pref);
+    }catch(e){}
+  </script>
+</body>
+</html>
